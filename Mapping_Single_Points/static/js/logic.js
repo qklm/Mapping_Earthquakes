@@ -2,6 +2,12 @@ console.log("working");
 
 // Create the map object with a center and zoom level.
 let map = L.map('mapid').setView([40.7, -94.5], 4);
+//  Add a marker to the map for Los Angeles, California.
+L.circle([34.0522, -118.2437], {
+    radius: 300,
+    color: 'black',
+    fillColor: '#ffffa1'
+ }).addTo(map);
 
 // Create the tile layer that wiill serve as the background
 let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/{z}/{x}/{y}?access_token={accessToken}', {
